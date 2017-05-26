@@ -1,5 +1,5 @@
 clear; clc;
-prompt='Please enter a single K value \n';
+prompt='Please enter a positve integer K value \n';
 k=input(prompt);
 max_iter=1000;
 fprintf('Loading and Visualizing Data ...\n');

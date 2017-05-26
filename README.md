@@ -1,17 +1,17 @@
 # WORK IN PROGRESS
 
 # K-Means-Cluster-Analysis
-A simple program which performs K-Means clustering on an included sample data set and visualizes the results.    
+A simple program which performs K-Means clustering on a data set and visualizes the results.    
 
 # Usage
-Set number of clusters(k) and max iterations(max_iter) in the file main.m.    
-Run main.m to begin the clustering.    
-The program will plot the final results.
+Set number of max iterations(max_iter) in the file main.m.    
+Run main.m and enter 'K' value to begin the clustering.    
+The program will plot the results.
 
 # Features
 * Plots Initial Data.
 * Calculates optimal K-Mean centres corresponding to local minimum and plots the location.
-* Plots each cluster with a unique colour.
+* Plots each cluster with a characteristic random colour.
 
 # Issues/To-Do
 * ~~Program currently works properly only on the original data set. Will have to genralize the format.~~ **UPD:** Data loading has been  generalized.Now loads from data.mat file which must contain a Nx2 matrix named 'X'. 
