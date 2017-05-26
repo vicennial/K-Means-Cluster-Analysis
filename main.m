@@ -1,14 +1,17 @@
 clear; clc;
-figure;
+prompt='Please enter a positve integer K value \n';
+k=input(prompt);
 max_iter=1000;
 fprintf('Loading and Visualizing Data ...\n');
-X=importfile('data.txt',1,300);
+load('data','X');
+assert(isempty(X)==0 && size(X,2)==2,'Data must be a N x 2 matrix where each row contains X and Y coordinate');
+assert(isint(k) && k>=1 && k<=size(X,1),'Please make sure that the value of k is a positive integer less than or equal to the number of data points');
+figure;
 hold on;
-scatter(X(:,1),X(:,2),50);
+scatter(X(:,1),X(:,2),200,'.');
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 fprintf('Generating Optimal K-Means Locations and Plotting Locations...\n');
-k=3;
 Means=GenRandom(X,k);
 pres=zeros(size(X,1),1);
 res=ones(size(X,1),1);
@@ -28,5 +31,5 @@ hold off;
 figure;
 hold on;
 for i=1:k
-    scatter(X(res==i,1),X(res==i,2),50,rand(1,3));
+    scatter(X(res==i,1),X(res==i,2),50,rand(1,3),'filled');
 end
