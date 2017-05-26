@@ -14,7 +14,7 @@ The program will plot the final results.
 * Plots each cluster with a unique colour.
 
 # Issues/To-Do
-* Program currently works properly only on the original data set. Will have to genralize the format.
+* ~~Program currently works properly only on the original data set. Will have to genralize the format.~~ **UPD:** Data loading has been  generalized.Now loads from data.mat file which must contain a Nx2 matrix named 'X'. 
 * Program partly displays unrequired data when number of clusters is higher than required. Will have to think of a fix.
 
 # Disclaimer
