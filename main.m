@@ -5,7 +5,7 @@ fprintf('Loading and Visualizing Data ...\n');
 load('data','X');
 assert(isempty(X)==0 && size(X,2)==2,'Data must be a N x 2 matrix where each row contains X and Y coordinate');
 hold on;
-scatter(X(:,1),X(:,2),50);
+scatter(X(:,1),X(:,2),200,'.');
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 fprintf('Generating Optimal K-Means Locations and Plotting Locations...\n');
@@ -29,5 +29,5 @@ hold off;
 figure;
 hold on;
 for i=1:k
-    scatter(X(res==i,1),X(res==i,2),50,rand(1,3));
+    scatter(X(res==i,1),X(res==i,2),50,rand(1,3),'filled');
 end
