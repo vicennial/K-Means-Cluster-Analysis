@@ -6,7 +6,8 @@ A simple program which performs K-Means clustering on a data set and visualizes 
 # Usage
 Set number of max iterations(max_iter) in the file main.m.    
 Run main.m and enter 'K' value to begin the clustering.    
-The program will plot the results.
+The program will plot the results.  
+Note: To generate a new random data set of 500 points, run the GetNewData.m file.  
 
 # Features
 * Plots Initial Data.
