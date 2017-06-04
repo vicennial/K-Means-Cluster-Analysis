@@ -1,4 +1,3 @@
-# WORK IN PROGRESS
 
 # K-Means-Cluster-Analysis
 A simple program which performs K-Means clustering on a data set and visualizes the results.    
