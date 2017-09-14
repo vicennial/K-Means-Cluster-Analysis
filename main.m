@@ -37,3 +37,4 @@ CP_values=compactness(X,Means,res,k);
 Compactness_Value=sum(CP_values)/length(CP_values)
 Separation=separation(X,Means,res,k)
 Davies_Bouldin_Index=DB_Index(X,Means,res,k)
+Dunn_Validity_Index=DV_Index(X,Means,res,k)

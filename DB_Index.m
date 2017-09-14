@@ -1,4 +1,8 @@
 function ans=DB_Index(X,Means,res,k)
+%Davies-Bouldin Index (DB).
+%This index can identify cluster overlap by measuring the ratio of the sum
+%of within-cluster scatters to between-cluster separations.
+%DB close to 0 indicates that clusters are compact and far from each other.
 temp=compactness(X,Means,res,k);
 p=zeros(k,1);
 for i=1:k
