@@ -4,7 +4,6 @@ k=input(prompt);
 max_iter=1000;
 fprintf('Loading and Visualizing Data ...\n');
 load('data','X');
-%X=halfkernel(); X=X(:,1:2);
 assert(isempty(X)==0 && size(X,2)==2,'Data must be a N x 2 matrix where each row contains X and Y coordinate');
 assert(isint(k) && k>=1 && k<=size(X,1),'Please make sure that the value of k is a positive integer less than or equal to the number of data points');
 figure;
