@@ -1,9 +1,10 @@
-clear; clc;
+clear; clc; close all;
 prompt='Please enter a positve integer K value \n';
 k=input(prompt);
 max_iter=1000;
 fprintf('Loading and Visualizing Data ...\n');
 load('data','X');
+%X=halfkernel(); X=X(:,1:2);
 assert(isempty(X)==0 && size(X,2)==2,'Data must be a N x 2 matrix where each row contains X and Y coordinate');
 assert(isint(k) && k>=1 && k<=size(X,1),'Please make sure that the value of k is a positive integer less than or equal to the number of data points');
 figure;
@@ -33,3 +34,7 @@ hold on;
 for i=1:k
     scatter(X(res==i,1),X(res==i,2),50,rand(1,3),'filled');
 end
+CP_values=compactness(X,Means,res,k);
+Compactness_Value=sum(CP_values)/length(CP_values)
+Separation=separation(X,Means,res,k)
+Davies_Bouldin_Index=DB_Index(X,Means,res,k)
